@@ -1,0 +1,18 @@
+/* Progenius brand palette: forest green + deep blue, with neutral surfaces. */
+:root{--green:#002B15;--blue:#000A76;--on-dark:#ffffff;--paper:#f4f5f2;--line:#bac6bf}
+header{background:var(--paper);color:var(--green);border-color:var(--line)}
+.hero{background:var(--green);color:var(--on-dark)}
+.page-head,.closing{background:var(--blue);color:var(--on-dark)}
+.ticker{background:var(--blue);color:var(--on-dark)}
+.pill{background:var(--blue);color:var(--on-dark);border-color:var(--blue)}
+.hero .pill,.closing .pill{background:var(--on-dark);color:var(--blue);border-color:var(--on-dark)}
+.hero .pill:hover,.closing .pill:hover{box-shadow:0 7px 0 #ffffff25}
+.star{color:var(--on-dark)}.star i{background:var(--on-dark)}.star:after{background:var(--blue)}
+.star:focus-visible,.hero a:focus-visible,.closing a:focus-visible,.page-head a:focus-visible,footer a:focus-visible,footer button:focus-visible{outline-color:var(--on-dark)}
+.statement h2 em,.statement .text-link{color:var(--on-dark)}
+.project:hover .circle-arrow,.project:focus-visible .circle-arrow{background:var(--blue);color:var(--on-dark)}
+summary:hover,summary:focus-visible,.process article:hover{background:#000a760a}
+.form-grid label:focus-within{color:var(--blue)}input:focus,select:focus,textarea:focus{box-shadow:0 2px 0 var(--blue);background:#000a7608}
+.threads-art{background:var(--blue);color:var(--on-dark)}
+.black-art{background:var(--green);color:var(--on-dark)}
+@media(max-width:520px){header nav{background:var(--blue);color:var(--on-dark)}}

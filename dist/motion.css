@@ -1,0 +1,31 @@
+/* Motion stays decorative: content and navigation work without this layer. */
+.pill{transform:translate(var(--mx,0px),var(--my,0px));transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .3s,background .3s}
+.pill:hover,.pill:focus-visible{transform:translate(var(--mx,0px),calc(var(--my,0px) - 3px));box-shadow:0 7px 0 #002b1520}
+.pill:active{transform:translate(0,1px) scale(.97);box-shadow:none}
+.pill span,.nav-cta span{display:inline-block;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.pill:hover span,.pill:focus-visible span,.nav-cta:hover span{transform:translate(3px,-3px) rotate(8deg)}
+.project .art{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .55s cubic-bezier(.16,1,.3,1),filter .3s}
+.project .art strong{transition:translate .65s cubic-bezier(.16,1,.3,1)}
+.project:hover .art strong{translate:var(--mx,0px) var(--my,0px)}
+.project .orbit,.project .thread{transition:rotate 1.2s cubic-bezier(.16,1,.3,1),scale 1.2s}
+.project:hover .orbit,.project:focus-visible .orbit{rotate:18deg;scale:1.08}
+.project:hover .thread,.project:focus-visible .thread{rotate:-12deg;scale:1.08}
+.circle-arrow{transition:background .3s,color .3s,transform .4s}
+.project:hover .circle-arrow,.project:focus-visible .circle-arrow{background:var(--green);color:var(--on-dark);transform:rotate(45deg)}
+.project h3{transition:translate .3s}.project:hover h3{translate:5px 0}
+nav a,.text-link{position:relative}nav a:after,.text-link:after{content:'';position:absolute;height:1px;bottom:-6px;left:0;right:0;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s}
+nav a:hover{text-decoration:none}nav a:hover:after,nav a[aria-current]:after,.text-link:hover:after{transform:scaleX(1);transform-origin:left}
+.star{padding:0;border:0;background:transparent;color:var(--green);cursor:pointer;z-index:2;touch-action:manipulation}
+.star i{transition:filter .25s}.star:hover i{filter:brightness(1.7)}.star:focus-visible{outline:2px dashed var(--green);outline-offset:8px;border-radius:50%}
+.star:after{pointer-events:none}.star:hover,.star:focus-visible{animation-play-state:paused}
+.ticker:hover div{animation-play-state:paused}
+summary{transition:padding .35s,background .35s}summary b{transition:transform .3s}summary:hover,summary:focus-visible{background:#ffffff55;padding-left:14px;padding-right:14px}
+.process article{transition:background .3s}.process article:hover{background:#ffffff40}.process article .eyebrow{transition:translate .3s}.process article:hover .eyebrow{translate:8px 0}
+.closing .big-arrow{transition:transform .55s cubic-bezier(.16,1,.3,1)}.closing:has(.pill:hover) .big-arrow,.closing:has(.pill:focus-visible) .big-arrow{transform:translate(15px,-15px) rotate(7deg)}
+.form-grid label{transition:color .25s}.form-grid label:focus-within{color:#000a76}input,select,textarea{transition:box-shadow .25s,background .25s}input:focus,select:focus,textarea:focus{box-shadow:0 2px 0 var(--green);background:#ffffff20}
+.motion-toggle{background:none;color:var(--paper);border:1px solid #f0f0e750;border-radius:25px;font-size:10px;padding:6px 10px;cursor:pointer;white-space:nowrap}.motion-toggle:hover{background:#f0f0e720}.motion-toggle:disabled{cursor:default;opacity:.6}
+.menu{transition:transform .3s}.menu[aria-expanded=true]{transform:rotate(90deg)}nav.open{animation:menu-in .25s ease-out}@keyframes menu-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.motion-paused *,.motion-paused *:before,.motion-paused *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.motion-paused .pill,.motion-paused .art{transform:none!important}.motion-paused .project .art strong{translate:none}.motion-paused .project .orbit,.motion-paused .project .thread{rotate:none;scale:none}
+@media(prefers-reduced-motion:reduce){.pill,.project .art,.closing .big-arrow{transform:none!important}.project .art strong{translate:none}.project .orbit,.project .thread{rotate:none;scale:none}}
+
