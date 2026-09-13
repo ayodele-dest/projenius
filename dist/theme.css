@@ -1,5 +1,5 @@
-:root{--surface:#fafbf8;--surface-soft:#e9eee9;--text:#002b15;--muted:#53665b;--rule:#b7c2b8}
-html[data-resolved-theme="dark"]{--surface:#001b0d;--surface-soft:#062817;--text:#f5f7f3;--muted:#b8c7be;--rule:#365443}
+:root{--surface:#fafbf8;--surface-soft:#e9eee9;--text:#002b15;--muted:#53665b;--rule:#b7c2b8;--accent:#000a76}
+html[data-resolved-theme="dark"]{--surface:#0b0d0c;--surface-soft:#151817;--text:#f5f7f3;--muted:#b9c2bd;--rule:#3d4440;--accent:#aeb7ff}
 .header-actions{display:flex;align-items:center;justify-self:end;gap:14px}
 .theme-switcher{display:flex;padding:3px;border:1px solid var(--rule);border-radius:999px;background:var(--surface-soft)}
 .theme-switcher button{border:0;border-radius:999px;padding:8px 11px;background:transparent;color:var(--muted);font-size:10px;line-height:1;cursor:pointer}
@@ -14,7 +14,7 @@ body,header,.page-head,footer,.studio-about,.service-cards>a,.studio-baseline,.p
 .hero-round,.circle-arrow{border-color:var(--text);color:var(--text)}
 html[data-resolved-theme="dark"] .brand img{filter:brightness(0) invert(1)}
 html[data-resolved-theme="dark"] .nav-cta{background:#f5f7f3;color:#002b15;border-color:#f5f7f3}
-html[data-resolved-theme="dark"] .project .art{background:#062817}
+html[data-resolved-theme="dark"] .project .art{background:#151817}
 html[data-resolved-theme="dark"] input,html[data-resolved-theme="dark"] select,html[data-resolved-theme="dark"] textarea{color:var(--text);border-color:var(--rule)}
 input,select,textarea{color:var(--text);border-color:var(--rule);background:transparent}
 input::placeholder,textarea::placeholder{color:var(--muted)}
@@ -24,8 +24,24 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
 .theme-switcher button:focus-visible{outline:2px solid #000a76;outline-offset:2px}
 .header-actions{display:flex;align-items:center;justify-self:end;gap:16px}
 html[data-resolved-theme="dark"] .brand img{filter:brightness(0) invert(1)}
-html[data-resolved-theme="dark"] .project .art{background:#062817}
 html[data-resolved-theme="dark"] .notice{border-color:#e8f0eb}
+html[data-resolved-theme="dark"] .studio-about,
+html[data-resolved-theme="dark"] .closing,
+html[data-resolved-theme="dark"] .statement{background:#151817;color:var(--text);border:1px solid var(--rule)}
+html[data-resolved-theme="dark"] .rolling-capsule{background:#12301f}
+html[data-resolved-theme="dark"] .studio-work h2 em,
+html[data-resolved-theme="dark"] .studio-about h2 span,
+html[data-resolved-theme="dark"] .service-symbol,
+html[data-resolved-theme="dark"] .statement h2 em,
+html[data-resolved-theme="dark"] .statement .text-link{color:var(--accent)}
+html[data-resolved-theme="dark"] .pill{background:#000a76;color:#fff;border-color:#5365e6}
+html[data-resolved-theme="dark"] .closing .pill{background:#f5f7f3;color:#002b15;border-color:#f5f7f3}
+html[data-resolved-theme="dark"] .hero-round:hover,
+html[data-resolved-theme="dark"] .project:hover .circle-arrow,
+html[data-resolved-theme="dark"] .project:focus-visible .circle-arrow{background:var(--accent);color:#090b0a;border-color:var(--accent)}
+html[data-resolved-theme="dark"] summary:hover,
+html[data-resolved-theme="dark"] summary:focus-visible,
+html[data-resolved-theme="dark"] .process article:hover{background:#ffffff08}
 @media(max-width:1000px){.theme-switcher button{padding:7px 8px}.header-actions{gap:10px}.nav-cta{display:none}}
 @media(max-width:650px){header{grid-template-columns:1fr auto auto;gap:12px}.header-actions{display:block}.theme-switcher button{font-size:9px;padding:7px}}
 @media(max-width:390px){.theme-switcher button{padding:6px 5px}}

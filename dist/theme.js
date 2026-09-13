@@ -9,7 +9,7 @@
     document.documentElement.dataset.theme = selected;
     document.documentElement.dataset.resolvedTheme = resolved;
     document.documentElement.style.colorScheme = resolved;
-    themeColor?.setAttribute('content', resolved === 'dark' ? '#001b0d' : '#fafbf8');
+    themeColor?.setAttribute('content', resolved === 'dark' ? '#0b0d0c' : '#fafbf8');
     choices.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.themeChoice === selected)));
   };
   choices.forEach(button => button.addEventListener('click', () => {
