@@ -9,6 +9,8 @@
   --soft-inset:inset 4px 4px 10px rgba(40,62,51,.08),inset -4px -4px 10px rgba(255,255,255,.76)
 }
 
+*,*::before,*::after{box-shadow:none!important;text-shadow:none!important}
+
 html,body{background:var(--soft-canvas);color:var(--soft-ink)}
 body{letter-spacing:-.012em}
 header{background:color-mix(in srgb,var(--soft-canvas) 88%,transparent);border-bottom:0;box-shadow:0 8px 30px rgba(36,61,49,.07);color:var(--soft-ink)!important}
@@ -16,7 +18,7 @@ header a,header button,nav a{color:var(--soft-ink)!important}
 header img{filter:none!important}
 .nav-cta,.pill,.theme-switcher{border:0;box-shadow:var(--soft-shadow-small)}
 .nav-cta,.pill{background:var(--soft-surface);color:var(--soft-ink)}
-header .nav-cta{color:#173328!important}
+header .nav-cta{background:var(--soft-ink)!important;color:var(--soft-canvas)!important}
 .nav-cta:hover,.pill:hover{transform:translateY(-2px);box-shadow:10px 10px 24px rgba(40,62,51,.14),-7px -7px 20px rgba(255,255,255,.82)}
 .theme-switcher{background:var(--soft-surface-2);padding:5px}
 .theme-switcher button[aria-pressed="true"]{background:var(--soft-surface);color:var(--soft-ink);box-shadow:var(--soft-shadow-small)}
@@ -71,45 +73,6 @@ input:focus,select:focus,textarea:focus{outline:2px solid color-mix(in srgb,#000
 form{padding:clamp(1.5rem,4vw,3rem)}
 
 footer{border:0;background:var(--soft-surface-2)}
-
-html[data-theme="dark"]{
-  --soft-canvas:#171b19;
-  --soft-surface:#202522;
-  --soft-surface-2:#28302c;
-  --soft-ink:#f1f3ef;
-  --soft-muted:#b6c0ba;
-  --soft-shadow:14px 14px 34px rgba(0,0,0,.32),-9px -9px 24px rgba(66,76,70,.28);
-  --soft-shadow-small:7px 7px 18px rgba(0,0,0,.28),-5px -5px 14px rgba(66,76,70,.24);
-  --soft-inset:inset 4px 4px 10px rgba(0,0,0,.27),inset -4px -4px 10px rgba(66,76,70,.20)
-}
-html[data-theme="dark"] header{background:color-mix(in srgb,var(--soft-canvas) 90%,transparent)}
-html[data-theme="dark"] header img{filter:brightness(0) invert(1)!important}
-html[data-theme="dark"] .word-capsule{background:#30356f;color:#f7f7ff}
-html[data-theme="dark"] .service-cards>a,
-html[data-theme="dark"] .process article,
-html[data-theme="dark"] .threads-programme article,
-html[data-theme="dark"] .case-info,
-html[data-theme="dark"] .notice,
-html[data-theme="dark"] .copy-grid,
-html[data-theme="dark"] .studio-about,
-html[data-theme="dark"] .closing,
-html[data-theme="dark"] form,
-html[data-theme="dark"] details{background:var(--soft-surface)}
-
-@media(prefers-color-scheme:dark){
-  html[data-theme="system"]{
-    --soft-canvas:#171b19;
-    --soft-surface:#202522;
-    --soft-surface-2:#28302c;
-    --soft-ink:#f1f3ef;
-    --soft-muted:#b6c0ba;
-    --soft-shadow:14px 14px 34px rgba(0,0,0,.32),-9px -9px 24px rgba(66,76,70,.28);
-    --soft-shadow-small:7px 7px 18px rgba(0,0,0,.28),-5px -5px 14px rgba(66,76,70,.24);
-    --soft-inset:inset 4px 4px 10px rgba(0,0,0,.27),inset -4px -4px 10px rgba(66,76,70,.20)
-  }
-  html[data-theme="system"] .word-capsule{background:#30356f;color:#f7f7ff}
-  html[data-theme="system"] header img{filter:brightness(0) invert(1)!important}
-}
 
 @media(max-width:760px){
   .closing{grid-template-columns:1fr;align-items:start}
